@@ -15,6 +15,16 @@
       "type": "object",
       "title": "Open Multiple Files - Configuration",
       "properties": {
+        "openMultipleFiles.defaultGlob": {
+            "type": "string",
+            "description": "A default glob of files to open",
+            "default": "**/*"
+        },
+        "openMultipleFiles.defaultGlobCursorPosition": {
+            "type": "number",
+            "description": "A cursor position in the defaultGlob. -1 means select all",
+            "default": -1
+        },
         "openMultipleFiles.exclude": {
           "type": "string",
           "description": "A glob of files to exclude"

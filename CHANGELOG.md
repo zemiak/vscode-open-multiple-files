@@ -1,3 +1,6 @@
+### Version 1.5.0
+- Added "openMultipleFiles.defaultGlob" and "openMultipleFiles.defaultGlobCursorPosition" settings
+
 ### Version 1.4.0
 - Update .github/FUNDING.yml
 - Deleted repo-level github funding.yml

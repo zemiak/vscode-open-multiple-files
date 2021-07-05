@@ -30,10 +30,15 @@ async function open ( contextMenuObj?: IContextMenuObj | string ) {
 
   if ( !includeGlob ) {
 
-    includeGlob = await vscode.window.showInputBox ({
-      placeHolder: 'Glob: *.{js,ts}',
-      value: '**/*'
-    });
+    let inputBoxOptions = {
+        placeHolder: 'Glob: *.{js,ts}',
+        value: config.defaultGlob,
+        valueSelection: undefined
+      };
+    if (config.defaultGlobCursorPosition > -1) {
+        inputBoxOptions.valueSelection = [config.defaultGlobCursorPosition, config.defaultGlobCursorPosition]
+    }
+    includeGlob = await vscode.window.showInputBox (inputBoxOptions);
 
   }
 
